@@ -37,6 +37,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libfreetype6-dev \
         libzip-dev \
         libicu-dev \
+        libxml2-dev \
+        libonig-dev \
         unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
