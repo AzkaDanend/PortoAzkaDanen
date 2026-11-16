@@ -54,35 +54,6 @@
                     @endforeach
                 </div>
             @endif
-
-            <div class="mt-2 overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-lg shadow-navy-700/5" data-reveal>
-                <div class="grid grid-cols-1 md:grid-cols-5">
-                    <div class="p-8 sm:p-10 md:col-span-3">
-                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-700 text-white">
-                            <x-icon name="code"/>
-                        </span>
-                        <h3 class="mt-5 text-2xl font-bold tracking-tight text-navy-700">Project showcase in progress</h3>
-                        <p class="mt-2 max-w-md text-sm leading-relaxed text-muted">
-                            Featured academic and personal projects are being verified against real repositories and documentation.
-                            Only confirmed work will be published here — no placeholders presented as finished work.
-                        </p>
-                        <ul class="mt-6 space-y-2.5 text-sm text-muted">
-                            <li class="flex items-center gap-2.5"><span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-navy-200 text-[10px] font-bold text-navy-700">1</span>Real repository or documentation required</li>
-                            <li class="flex items-center gap-2.5"><span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-navy-200 text-[10px] font-bold text-navy-700">2</span>Clear problem, role, and technology tags</li>
-                            <li class="flex items-center gap-2.5"><span class="inline-flex h-5 w-5 items-center justify-center rounded-full border border-navy-200 text-[10px] font-bold text-navy-700">3</span>Honest screenshots — never invented</li>
-                        </ul>
-                    </div>
-                    <div class="relative min-h-60 bg-navy-800 md:col-span-2">
-                        <div class="absolute inset-0 bg-navy-800 p-6 font-mono text-[13px] leading-relaxed text-navy-50" aria-hidden="true">
-                            <p><span class="text-peri-300">const</span> showcase <span class="text-peri-300">=</span> {</p>
-                            <p class="pl-4">status: <span class="text-white/90">"verifying"</span>,</p>
-                            <p class="pl-4">rule: <span class="text-white/90">"no-fake-projects"</span>,</p>
-                            <p class="pl-4">publishes: <span class="text-white/90">"confirmed-only"</span>,</p>
-                            <p>};</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

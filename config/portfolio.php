@@ -280,20 +280,12 @@ return [
                 'verification_url' => '',
                 'pdf_url' => null,
             ],
-            [
-                'title' => 'Datavidia 10.0',
-                'issuer' => 'Institut Teknologi Bandung (ITB)',
-                'issue_date' => 'Kompetisi Data Science tingkat nasional',
-                'skills' => ['Data Science', 'Data Analysis', 'Competition'],
-                'verification_url' => '',
-                'pdf_url' => null,
-            ],
         ],
     ],
 
     'github' => [
         'username' => 'AzkaDanend',
-        'repos_endpoint' => 'https://api.github.com/users/AzkaDanend/repos?sort=updated&per_page=6',
+        'repos_endpoint' => 'https://api.github.com/users/AzkaDanend/repos?sort=updated&per_page=100',
         'calendar_endpoint' => 'https://api.github.com/users/AzkaDanend/events/public',
         'title' => 'GitHub Activity',
         'subtitle' => 'A look at my public repositories and coding activity.',

@@ -14,7 +14,9 @@
         @else
             <div class="flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center">
                 <span class="rounded-xl bg-white/15 px-4 py-1 font-mono text-xs uppercase tracking-widest text-white/90">{{ $project['status'] }}</span>
-                <p class="max-w-[16rem] text-sm font-medium text-white/80">Placeholders appear only while real project art is unavailable.</p>
+                @if (($project['status'] ?? '') === 'draft')
+                    <p class="max-w-[16rem] text-sm font-medium text-white/80">Placeholders appear only while real project art is unavailable.</p>
+                @endif
             </div>
         @endif
     </div>

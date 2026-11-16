@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="lg:col-span-3">
-                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wide text-white/85">Top Public Repositories</h3>
+                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wide text-white/85">Public Repositories</h3>
 
                     <template x-if="repos.status === 'loading'">
                         <div class="space-y-4" aria-live="polite">
@@ -101,7 +101,12 @@
                                 >
                                     <div class="flex items-start justify-between gap-2">
                                         <h4 class="truncate font-mono text-sm font-bold text-navy-700 group-hover:text-navy-800" x-text="repo.name"></h4>
-                                        <x-icon name="external" class="h-4 w-4 shrink-0 text-muted group-hover:text-navy-700"/>
+                                        <div class="flex shrink-0 items-center gap-1.5">
+                                            <template x-if="repo.fork">
+                                                <span class="rounded-full bg-navy-50 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wide text-navy-500">Fork</span>
+                                            </template>
+                                            <x-icon name="external" class="h-4 w-4 shrink-0 text-muted group-hover:text-navy-700"/>
+                                        </div>
                                     </div>
                                     <p class="mt-2 grow text-xs leading-relaxed text-muted" x-text="repo.description || 'No description provided.'"></p>
                                     <div class="mt-4 flex flex-wrap items-center gap-3 border-t border-navy-50 pt-3 text-xs text-muted">
@@ -157,7 +162,7 @@
                         <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-white/70">Direct channels</p>
                         <ul class="mt-4 space-y-3 text-sm">
                             <li><a href="mailto:{{ $profile['email'] }}" class="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white">{{ $profile['email'] }}</a></li>
-                            <li class="text-white/75">{{ $profile['location'] }} · {{ $profile['availability'] }}</li>
+                            <li class="text-white/75">{{ $profile['location'] }}</li>
                             <li class="text-white/75">{{ $profile['university'] }} · {{ $profile['major'] }}</li>
                         </ul>
                         <p class="mt-5 border-t border-white/15 pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">Photo: shoreline at golden hour</p>
@@ -228,8 +233,7 @@
                         const data = await res.json();
                         if (!Array.isArray(data)) return { ok: false };
                         const repos = data
-                            .filter((r) => r && !r.fork)
-                            .slice(0, 6)
+                            .filter((r) => r)
                             .map((r) => ({
                                 name: r.name || '',
                                 description: r.description,
@@ -237,6 +241,7 @@
                                 stars: r.stargazers_count ?? 0,
                                 forks: r.forks_count ?? 0,
                                 url: r.html_url ?? null,
+                                fork: !!r.fork,
                             }));
                         return { ok: true, repos };
                     } catch (err) {

@@ -48,13 +48,6 @@
             </ul>
 
             <div class="hidden items-center gap-3 md:flex">
-                <span
-                    class="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors"
-                    :class="scrolled ? 'border-peri-200 bg-peri-50 text-peri-600' : 'border-white/30 bg-white/10 text-white'"
-                >
-                    <span class="h-1.5 w-1.5 rounded-full" :class="scrolled ? 'bg-peri-400' : 'bg-emerald-300'" aria-hidden="true"></span>
-                    {{ $profile['availability'] }}
-                </span>
                 <a
                     href="#contact"
                     class="rounded-xl px-4 py-2 text-sm font-semibold shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-600"
@@ -95,11 +88,7 @@
                     </li>
                 @endforeach
             </ul>
-            <div class="mt-3 flex items-center justify-between gap-3 border-t border-navy-100 pt-3">
-                <span class="inline-flex items-center gap-2 rounded-full border border-peri-200 bg-peri-50 px-3 py-1.5 text-xs font-semibold text-peri-600">
-                    <span class="h-1.5 w-1.5 rounded-full bg-peri-400" aria-hidden="true"></span>
-                    {{ $profile['availability'] }}
-                </span>
+            <div class="mt-3 flex items-center justify-end gap-3 border-t border-navy-100 pt-3">
                 <a href="#contact" @click="open = false" class="rounded-xl bg-navy-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-navy-800">Let's Connect</a>
             </div>
         </div>
