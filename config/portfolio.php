@@ -165,7 +165,7 @@ return [
 
     // Verified projects only. Unverified candidates intentionally omitted:
     // do not publish as completed work until real artifacts exist.
-    // PDF portfolio items below are marked ongoing/draft until repos go live.
+    // PDF portfolio items below; status honest: completed vs ongoing.
     'projects' => [
         'title' => 'Selected Projects',
         'subtitle' => 'Academic and personal projects that demonstrate how I approach problems, analyze requirements, and develop solutions.',
@@ -192,7 +192,7 @@ return [
                 'thumbnail' => null,
                 'github_url' => null,
                 'live_url' => null,
-                'status' => 'ongoing',
+                'status' => 'completed',
             ],
             [
                 'id' => 'mark-up',
@@ -204,7 +204,7 @@ return [
                 'thumbnail' => null,
                 'github_url' => null,
                 'live_url' => null,
-                'status' => 'ongoing',
+                'status' => 'completed',
             ],
             [
                 'id' => 'placeholder-1',
