@@ -68,6 +68,11 @@
                         <a href="{{ $social['linkedin']['url'] }}" target="_blank" rel="noopener noreferrer" class="text-white/75 transition hover:text-white" aria-label="LinkedIn profile">
                             <x-icon name="linkedin" class="h-5 w-5"/>
                         </a>
+                        @isset($social['instagram'])
+                            <a href="{{ $social['instagram']['url'] }}" target="_blank" rel="noopener noreferrer" class="text-white/75 transition hover:text-white" aria-label="Instagram profile">
+                                <x-icon name="instagram" class="h-5 w-5"/>
+                            </a>
+                        @endisset
                     </span>
                 </div>
             </div>

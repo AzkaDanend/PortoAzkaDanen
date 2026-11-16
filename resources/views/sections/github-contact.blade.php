@@ -146,6 +146,9 @@
                         ><x-icon name="mail" class="h-4 w-4"/> {{ $contact['mail_cta'] }}</a>
                         <a href="{{ $social['github']['url'] }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20"><x-icon name="github" class="h-4 w-4"/> GitHub</a>
                         <a href="{{ $social['linkedin']['url'] }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20"><x-icon name="linkedin" class="h-4 w-4"/> LinkedIn</a>
+                        @isset($social['instagram'])
+                            <a href="{{ $social['instagram']['url'] }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20"><x-icon name="instagram" class="h-4 w-4"/> Instagram</a>
+                        @endisset
                     </div>
                 </div>
 
